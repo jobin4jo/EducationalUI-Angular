@@ -4,13 +4,20 @@ import { RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   {
     path: '',
-    loadChildren: () => import('../app/auth/auth.module').then(m => m.AuthModule)
-  }
-
+    loadChildren: () =>
+      import('../app/auth/auth.module').then((m) => m.AuthModule),
+  },
+  {
+    path: 'User',
+    loadChildren: () =>
+      import(
+        '../app/UserManagement/user-management/user-management.module'
+      ).then((m) => m.UserManagementModule),
+  },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

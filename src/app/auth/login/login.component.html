@@ -1,17 +1,51 @@
-<div class="container" >
-    <div class="card" style="width: 500px;">
-        <div class="card-head">
-            <p class="d-flex justify-content-center">Registration</p>
-        
-
-        </div>
-        <div class="card-body">
-            <label>UserName:</label>
-            <input placeholder="Enter you name" type="text" class="form-control"/>
-            <label>PassWord:</label>
-            <input placeholder="Enter you password" type="text" class="form-control"/>
-        </div>
-        
-      </div>
-
+<div class="">
+  <mat-card class="cardbody">
+    <mat-card-header>
+      <div mat-card-avatar class="example-header-image"></div>
+      <mat-card-title>Login</mat-card-title>
+      <!-- <mat-card-subtitle>Dog Breed</mat-card-subtitle> -->
+    </mat-card-header>
+    <hr />
+    <form class="example-form" [formGroup]="loginForm">
+      <mat-form-field class="example-full-width">
+        <mat-label>UserName</mat-label>
+        <input matInput formControlName="UserName" placeholder="Enter email" />
+      </mat-form-field>
+      <mat-form-field class="example-full-width">
+        <mat-label>Password</mat-label>
+        <input
+          matInput
+          formControlName="password"
+          placeholder="Enter password"
+        />
+      </mat-form-field>
+      <!-- <mat-form-field class="example-full-width">
+        <mat-label>ConfirmPassword</mat-label>
+        <input matInput placeholder="Enter reEnterpassword" />
+      </mat-form-field>
+      <mat-form-field class="example-full-width">
+        <mat-label>Country</mat-label>
+        <input matInput placeholder="Enter Country" />
+      </mat-form-field>
+      <mat-form-field class="example-full-width">
+        <mat-label>State</mat-label>
+        <input matInput placeholder="Enter State" />
+      </mat-form-field>
+      <mat-form-field class="example-full-width">
+        <mat-label>District</mat-label>
+        <input matInput placeholder="Enter District" />
+      </mat-form-field> -->
+      <button
+        mat-raised-button
+        [disabled]="!loginForm.valid"
+        (click)="login()"
+        color="primary"
+      >
+        Login</button
+      >&nbsp;
+      <button mat-raised-button (click)="goToRegister()" color="accent">
+        New User
+      </button>
+    </form>
+  </mat-card>
 </div>

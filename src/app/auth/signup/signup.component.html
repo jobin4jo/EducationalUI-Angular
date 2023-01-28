@@ -1,0 +1,76 @@
+<div class="">
+  <mat-card class="shadow-lg p-3 mb-5 bg-white rounded" class="cardbody">
+    <mat-card-header>
+      <div mat-card-avatar class="example-header-image"></div>
+      <mat-card-title>User Registeration</mat-card-title>
+
+      <!-- <mat-card-subtitle>Dog Breed</mat-card-subtitle> -->
+    </mat-card-header>
+    <hr />
+    <form class="example-form" [formGroup]="RegisterForm">
+      <mat-form-field class="example-full-width">
+        <mat-label>Email</mat-label>
+        <input matInput formControlName="email" placeholder="Enter email" />
+      </mat-form-field>
+      <mat-form-field class="example-full-width">
+        <mat-label>User Name</mat-label>
+        <input
+          matInput
+          formControlName="userName"
+          placeholder="Enter UserName"
+        />
+      </mat-form-field>
+      <mat-form-field class="example-full-width">
+        <mat-label>Password</mat-label>
+        <input
+          matInput
+          formControlName="password"
+          placeholder="Enter password"
+        />
+      </mat-form-field>
+      <mat-form-field class="example-full-width">
+        <mat-label>ConfirmPassword</mat-label>
+        <input
+          matInput
+          placeholder="Enter reEnterpassword"
+          formControlName="Cpassword"
+        />
+      </mat-form-field>
+      <mat-form-field class="example-full-width">
+        <mat-label>Country</mat-label>
+        <input matInput placeholder="Enter Country" formControlName="country" />
+      </mat-form-field>
+      <!-- <h4>Country</h4> -->
+      <!-- <mat-form-field appearance="fill">
+        <mat-label>Favorite food</mat-label>
+        <mat-select>
+          <mat-option *ngFor="let food of foods" [value]="food.value">
+            {{ food.viewValue }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field> -->
+      <mat-form-field class="example-full-width">
+        <mat-label>State</mat-label>
+        <input matInput placeholder="Enter State" formControlName="state" />
+      </mat-form-field>
+      <mat-form-field class="example-full-width">
+        <mat-label>District</mat-label>
+        <input
+          matInput
+          placeholder="Enter District"
+          formControlName="District"
+        />
+      </mat-form-field>
+      <button
+        mat-raised-button
+        color="primary"
+        [disabled]="!RegisterForm.valid"
+        (click)="Register()"
+      >
+        Register</button
+      >&nbsp;
+      <button mat-raised-button color="warn">Contine With Google</button>&nbsp;
+      <button mat-raised-button  color="accent" (click)="BacktoLogin()">Back To Login</button>
+    </form>
+  </mat-card>
+</div>
