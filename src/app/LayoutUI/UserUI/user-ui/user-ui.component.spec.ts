@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { UIComponent } from './ui.component';
+import { UserUIComponent } from './user-ui.component';
 
-describe('UIComponent', () => {
-  let component: UIComponent;
-  let fixture: ComponentFixture<UIComponent>;
+describe('UserUIComponent', () => {
+  let component: UserUIComponent;
+  let fixture: ComponentFixture<UserUIComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ UIComponent ]
+      declarations: [ UserUIComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(UIComponent);
+    fixture = TestBed.createComponent(UserUIComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

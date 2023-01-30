@@ -24,13 +24,12 @@ export class LoginComponent implements OnInit {
   }
   login() {
     this.Http.UserLogin(this.loginForm.value).subscribe((res: any) => {
-      console.log(res);
-      if ((res.Status = 'True')) {
+      console.log(res.data.userId.role);
+      if (res.data.userId.role == 'Admin') {
         this.loginForm.reset();
-        
-        // this.toast.success('User Login ', 'SuccessFully');
-      } else {
-        // this.toast.error('User Not Login ', 'SuccessFully');
+        this.router.navigate(['Admin']);
+      } else if (res.data.userId.role == 'User') {
+        this.router.navigate(['User']);
       }
     });
     console.log(this.loginForm.value);
