@@ -26,6 +26,7 @@ export class LoginComponent implements OnInit {
     this.Http.UserLogin(this.loginForm.value).subscribe((res: any) => {
       console.log(res.data.userId.role);
       if (res.data.userId.role == 'Admin') {
+        localStorage.setItem('user', JSON.stringify(res.data));
         this.loginForm.reset();
         this.router.navigate(['Admin']);
       } else if (res.data.userId.role == 'User') {

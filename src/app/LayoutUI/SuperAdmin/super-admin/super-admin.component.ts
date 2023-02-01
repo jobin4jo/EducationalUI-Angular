@@ -8,8 +8,13 @@ import { Router } from '@angular/router';
 })
 export class SuperAdminComponent implements OnInit {
   constructor(private router: Router) {}
-
-  ngOnInit(): void {}
+  collectionData: any;
+  name: any;
+  ngOnInit(): void {
+    this.collectionData = localStorage.getItem('user');
+    const main = JSON.parse(this.collectionData);
+    this.name = main.userId.name;
+  }
   gotoLogin() {
     this.router.navigate(['']);
   }
