@@ -13,6 +13,7 @@ import { MatMenuModule } from '@angular/material/menu';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatListModule } from '@angular/material/list';
 import { MatTableModule } from '@angular/material/table';
+import { MatDialogModule } from '@angular/material/dialog';
 @NgModule({
   declarations: [],
   imports: [CommonModule],
@@ -29,6 +30,7 @@ import { MatTableModule } from '@angular/material/table';
     MatPaginatorModule,
     MatListModule,
     MatTableModule,
+    MatDialogModule,
   ],
 })
 export class MaterialModule {}

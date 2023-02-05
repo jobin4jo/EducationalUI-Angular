@@ -1,5 +1,5 @@
 <p>
-  <mat-toolbar >
+  <mat-toolbar color="primary">
     <button
       mat-icon-button
       color="accent"
@@ -7,29 +7,47 @@
     >
       <mat-icon>view_week</mat-icon>
     </button>
-    <p style="color: black; margin-bottom: 1px">Learn Jo</p>
+    <p style="margin-bottom: 1px">Learn Jo</p>
     <div style="margin-left: 150px">
-      <button mat-stroked-button color="accent">Home</button>&nbsp;&nbsp;
-      <button mat-stroked-button color="accent">Home</button>&nbsp;&nbsp;
-      <button mat-stroked-button color="accent">Home</button>&nbsp;&nbsp;
-      <button mat-stroked-button color="accent">Home</button>
+      <button mat-flat-button color="primary">Home</button>&nbsp;&nbsp;
+      <button mat-flat-button color="primary">Course</button>&nbsp;&nbsp;
+      <button mat-flat-button color="primary">Blog</button>&nbsp;&nbsp;
+      <button mat-flat-button color="primary">Home</button>
     </div>
     <span class="example-spacer"></span>
-    <button
-      mat-icon-button
-      class="example-icon favorite-icon"
-      aria-label="Example icon-button with heart icon"
-    >
-      <mat-icon>favorite</mat-icon>
+    <button mat-flat-button color="primary">
+      <mat-icon>fingerprint</mat-icon>
+      Register
     </button>
     <button
-      mat-icon-button
+      mat-flat-button
+      color="primary"
       class="example-icon"
-      aria-label="Example icon-button with share icon"
+      aria-label="Example icon-button with share icon" (click)="Onlogin()"
     >
-      <mat-icon>share</mat-icon>
+      <mat-icon>exit_to_app</mat-icon>
+      Login
     </button>
   </mat-toolbar>
 </p>
 <router-outlet></router-outlet>
-<footer></footer>
+<!-- <footer>
+  <p>
+    <mat-toolbar color="primary" style="height: 100px">
+      <button
+        mat-icon-button
+        color="accent"
+        aria-label="Example icon button with a menu icon"
+      >
+        <mat-icon>view_week</mat-icon>
+      </button>
+      <span class="example-spacer"></span>
+      <h6 style="font-style: normal; font-size: 13px; margin-right: 422px">
+        CopyRight@2023
+      </h6>
+      <h5 style="font-style: normal; font-size: 13px">
+        Developedby Jo4TechSolutions
+      </h5>
+    </mat-toolbar>
+  </p>
+</footer> -->

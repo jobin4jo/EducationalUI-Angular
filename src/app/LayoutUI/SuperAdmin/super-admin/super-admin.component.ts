@@ -1,13 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-
+import { MatDialog } from '@angular/material/dialog';
+import { ChangePasswordComponent } from '../Components/change-password/change-password.component';
 @Component({
   selector: 'app-super-admin',
   templateUrl: './super-admin.component.html',
   styleUrls: ['./super-admin.component.scss'],
 })
 export class SuperAdminComponent implements OnInit {
-  constructor(private router: Router) {}
+  constructor(private router: Router, public dialog: MatDialog) {}
   collectionData: any;
   name: any;
   ngOnInit(): void {
@@ -17,5 +18,9 @@ export class SuperAdminComponent implements OnInit {
   }
   gotoLogin() {
     this.router.navigate(['']);
+  }
+  openDialog() {
+    const dialogRef = this.dialog.open(ChangePasswordComponent);
+    dialogRef.afterClosed();
   }
 }

@@ -11,9 +11,20 @@ import { SuperAdminComponent } from './LayoutUI/SuperAdmin/super-admin/super-adm
 import { UserUIComponent } from './LayoutUI/UserUI/user-ui/user-ui.component';
 import { AdminDashBoardComponent } from './LayoutUI/SuperAdmin/Components/admin-dash-board/admin-dash-board.component';
 import { CourseComponent } from './LayoutUI/SuperAdmin/Components/course/course.component';
+import { CategoryComponent } from './LayoutUI/SuperAdmin/Components/category/category.component';
+import { ChangePasswordComponent } from './LayoutUI/SuperAdmin/Components/change-password/change-password.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
-  declarations: [AppComponent, SuperAdminComponent, UserUIComponent, AdminDashBoardComponent, CourseComponent],
+  declarations: [
+    AppComponent,
+    SuperAdminComponent,
+    UserUIComponent,
+    AdminDashBoardComponent,
+    CourseComponent,
+    CategoryComponent,
+    ChangePasswordComponent,
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -22,6 +33,7 @@ import { CourseComponent } from './LayoutUI/SuperAdmin/Components/course/course.
     CommonModule,
     HttpClientModule,
     BrowserAnimationsModule,
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

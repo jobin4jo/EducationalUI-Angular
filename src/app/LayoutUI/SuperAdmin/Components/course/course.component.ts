@@ -25,6 +25,7 @@ export class CourseComponent implements OnInit {
   OnDelete(id: any) {
     debugger;
     return this.course.DeleteCourseById(id).subscribe((res: any) => {
+      console.log(res);
       this.getAllCourse();
     });
   }
