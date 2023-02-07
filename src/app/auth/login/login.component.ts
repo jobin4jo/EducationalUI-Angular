@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
-import { AuthService } from '../Service/auth.service';
-// import { ToastrService } from 'ngx-toastr';
+import { SnackbarService } from 'src/app/Notificationservice/snackbar.service';
 
+import { AuthService } from '../Service/auth.service';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -13,7 +13,8 @@ export class LoginComponent implements OnInit {
   loginForm!: FormGroup;
   constructor(
     private router: Router,
-    private Http: AuthService // private toast: ToastrService
+    private Http: AuthService,
+    private snack: SnackbarService
   ) {}
 
   ngOnInit(): void {
@@ -23,19 +24,27 @@ export class LoginComponent implements OnInit {
     });
   }
   login() {
-    this.Http.UserLogin(this.loginForm.value).subscribe((res: any) => {
-      console.log(res.data.userId.role);
-      if (res.data.userId.role == 'Admin') {
-        localStorage.setItem('user', JSON.stringify(res.data));
-        this.loginForm.reset();
-        this.router.navigate(['Admin']);
-      } else if (res.data.userId.role == 'User') {
-        this.router.navigate(['User']);
-      }
-    });
-    console.log(this.loginForm.value);
+    if (this.loginForm.value == null) {
+      this.snack.openSnackBar('Something Went Wrong', 'Undo');
+    } else {
+      this.Http.UserLogin(this.loginForm.value).subscribe((res: any) => {
+        console.log(res.data.userId.role);
+        if (res.data.userId.role == 'Admin') {
+          var name = res.data.userId.name;
+          this.snack.openSnackBar('Sucessfully ' + name + '', 'Splash');
+          localStorage.setItem('user', JSON.stringify(res.data));
+          this.loginForm.reset();
+          this.router.navigate(['Admin']);
+        } else if (res.data.userId.role == 'User') {
+          this.router.navigate(['User']);
+        }
+      });
+    }
   }
   goToRegister() {
     this.router.navigate(['signup']);
   }
+  // openSnackBar() {
+  //   this._snackBar.open("")
+  // }
 }
