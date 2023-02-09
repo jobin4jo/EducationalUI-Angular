@@ -19,6 +19,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { TutorComponent } from './LayoutUI/SuperAdmin/Components/tutor/tutor.component';
 import { AddTutorComponent } from './LayoutUI/SuperAdmin/Components/tutor/Components/add-tutor/add-tutor.component';
 import { AddCategoryComponent } from './LayoutUI/SuperAdmin/Components/category/Components/add-category/add-category.component';
+import { CouponComponent } from './LayoutUI/SuperAdmin/Components/coupon/coupon.component';
+import { AddCouponComponent } from './LayoutUI/SuperAdmin/Components/coupon/Components/add-coupon/add-coupon.component';
+import { ProfileDetailComponent } from './LayoutUI/SuperAdmin/Components/profile-detail/profile-detail.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -32,6 +35,9 @@ import { AddCategoryComponent } from './LayoutUI/SuperAdmin/Components/category/
     TutorComponent,
     AddTutorComponent,
     AddCategoryComponent,
+    CouponComponent,
+    AddCouponComponent,
+    ProfileDetailComponent,
   ],
   imports: [
     BrowserModule,

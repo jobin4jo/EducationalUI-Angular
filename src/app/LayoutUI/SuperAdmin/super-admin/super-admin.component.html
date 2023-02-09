@@ -25,7 +25,10 @@
       <mat-list-item class="list" role="listitem" routerLink="Admin/tutor">
         <mat-icon>library_books</mat-icon>Tutor</mat-list-item
       >
-      <!-- <mat-list-item role="listitem">Category</mat-list-item> -->
+
+      <mat-list-item class="list" role="listitem" routerLink="Admin/coupon">
+        <mat-icon>new_releases</mat-icon>Coupon</mat-list-item
+      >
     </mat-list>
   </mat-drawer>
   <mat-drawer-content>
@@ -52,7 +55,7 @@
           <mat-icon>account_circle</mat-icon>
         </button>
         <mat-menu #menu="matMenu">
-          <button mat-menu-item>
+          <button mat-menu-item (click)="PopUpDetail()">
             <mat-icon>perm_identity</mat-icon>
             <span>ProfileDetail</span>
           </button>

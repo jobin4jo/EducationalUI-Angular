@@ -6,9 +6,20 @@ import { environment } from 'src/environments/environment';
 })
 export class CategoryService {
   EduAPI = environment.EducationalAPI;
-  cateAPI = 'Category/GetAllCategory';
+  cateAPI = 'Category/';
   constructor(public http: HttpClient) {}
   getAllCategory() {
-    return this.http.get(this.EduAPI + this.cateAPI);
+    return this.http.get(this.EduAPI + this.cateAPI + 'GetAllCategory');
   }
+  postCategory(data: any) {
+    return this.http.post(this.EduAPI + this.cateAPI + 'AddCategory', data);
+  }
+  deletecategory(id: any) {
+    return this.http.delete(
+      this.EduAPI + this.cateAPI + 'DeleteCategoryById?Id=' + id
+    );
+  }
+}
+export interface category {
+  categoryName: string;
 }

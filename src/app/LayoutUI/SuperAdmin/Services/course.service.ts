@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { environment } from '../../../../environments/environment';
+import { course } from '../Model/Course';
 @Injectable({
   providedIn: 'root',
 })
@@ -23,5 +24,8 @@ export class CourseService {
       'https://localhost:7111/api/User/ChangePassword/' + id,
       data
     );
+  }
+  addCourse(data: any) {
+    return this.http.post(this.EduAPI + this.CourseAPI + 'AddCourse', data);
   }
 }
