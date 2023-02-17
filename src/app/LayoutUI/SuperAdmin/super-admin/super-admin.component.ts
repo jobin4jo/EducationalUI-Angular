@@ -24,6 +24,7 @@ export class SuperAdminComponent implements OnInit {
     this.name = main.userId.name;
   }
   gotoLogin() {
+    localStorage.clear();
     this.router.navigate(['']);
   }
   openDialog() {
@@ -46,10 +47,10 @@ export class SuperAdminComponent implements OnInit {
         //   state: this.ArrayData.userId.state,
         //   emailId: this.ArrayData.userId.emailId,
         // },
-        data:this.ArrayData.userId
+        data: this.ArrayData.userId,
       });
       console.log(this.ArrayData.userId);
-      
+
       dialogRef.afterClosed();
     });
   }

@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AdminDashBoardComponent } from '../Components/admin-dash-board/admin-dash-board.component';
 import { CategoryComponent } from '../Components/category/category.component';
+import { CertificateComponent } from '../Components/certificate/certificate.component';
 import { CouponComponent } from '../Components/coupon/coupon.component';
 import { AddandEditCourseComponent } from '../Components/course/Components/addand-edit-course/addand-edit-course.component';
 import { CourseComponent } from '../Components/course/course.component';
@@ -14,6 +15,7 @@ const routes: Routes = [
   { path: 'addCourse', component: AddandEditCourseComponent },
   { path: 'tutor', component: TutorComponent },
   { path: 'coupon', component: CouponComponent },
+  { path: 'certificate', component: CertificateComponent },
 ];
 
 @NgModule({

@@ -22,6 +22,7 @@ import { AddCategoryComponent } from './LayoutUI/SuperAdmin/Components/category/
 import { CouponComponent } from './LayoutUI/SuperAdmin/Components/coupon/coupon.component';
 import { AddCouponComponent } from './LayoutUI/SuperAdmin/Components/coupon/Components/add-coupon/add-coupon.component';
 import { ProfileDetailComponent } from './LayoutUI/SuperAdmin/Components/profile-detail/profile-detail.component';
+import { CertificateComponent } from './LayoutUI/SuperAdmin/Components/certificate/certificate.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -38,6 +39,7 @@ import { ProfileDetailComponent } from './LayoutUI/SuperAdmin/Components/profile
     CouponComponent,
     AddCouponComponent,
     ProfileDetailComponent,
+    CertificateComponent,
   ],
   imports: [
     BrowserModule,

@@ -15,6 +15,13 @@
       <button mat-flat-button color="primary">Blog</button>&nbsp;&nbsp;
       <button mat-flat-button color="primary">Home</button>
     </div>
+    <input
+      class="form-control mr-sm-2"
+      type="search"
+      placeholder="Searching Any Thing"
+      aria-label="Search"
+    />&nbsp;
+    <button class="btn btn-light my-2 my-sm-0" type="submit">Search</button>
     <span class="example-spacer"></span>
     <button mat-flat-button color="primary" (click)="onregister()">
       <mat-icon>fingerprint</mat-icon>
@@ -32,6 +39,9 @@
     </button>
   </mat-toolbar>
 </p>
+<div class="jumbotron">
+  <form class="form-inline my-2 my-lg-0" style="width: 500px"></form>
+</div>
 <router-outlet></router-outlet>
 
 <p>

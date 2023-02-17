@@ -5,27 +5,36 @@
         width: 110px;
         height: 100px;
         border-radius: 72px;
-        border: solid 5px black;
+        border: solid 1px black;
       "
       src="../../../../../assets/png-transparent-user-computer-icons-user-miscellaneous-cdr-rectangle-thumbnail.png"
     />
     <br />
     &nbsp;
-    <p><mat-icon>account_circle</mat-icon>&nbsp; Name:</p>
-    <hr />
-    <!-- 
-    <p><mat-icon>perm_phone_msg</mat-icon> &nbsp;PhoneNumber: 45631545154</p>
-    <hr />
-    <p>
-      <mat-icon>view_agenda</mat-icon> &nbsp;address: 2-200 A Koottangal vilai
+    <p class="pop">
+      <mat-icon>account_circle</mat-icon>&nbsp; Name:{{ data.userName }}
     </p>
     <hr />
-    <p><mat-icon>work</mat-icon> &nbsp;city:Marthandam</p>
+
+    <p class="pop">
+      <mat-icon>perm_phone_msg</mat-icon> &nbsp;PhoneNumber:
+      {{ data.PhoneNumber }}
+    </p>
     <hr />
-    <p><mat-icon> call</mat-icon> &nbsp;State:TamilNadu</p>
+    <p class="pop">
+      <mat-icon>view_agenda</mat-icon> &nbsp;address: {{ data.address }}
+    </p>
     <hr />
-    <p><mat-icon> list_alt</mat-icon> &nbsp;EmailId:sample@gmail.com</p>
+    <p class="pop"><mat-icon>work</mat-icon> &nbsp;city:{{ data.city }}</p>
     <hr />
-    <p><mat-icon>supervised_user_circle</mat-icon>&nbsp;Role :Admin</p> -->
+    <p><mat-icon> call</mat-icon> &nbsp;State:{{ data.state }}</p>
+    <hr />
+    <p class="pop">
+      <mat-icon> list_alt</mat-icon> &nbsp;EmailId:{{ data.emailId }}
+    </p>
+    <hr />
+    <p class="pop">
+      <mat-icon>supervised_user_circle</mat-icon>&nbsp;Role :{{ data.role }}
+    </p>
   </mat-card-content>
 </mat-card>
