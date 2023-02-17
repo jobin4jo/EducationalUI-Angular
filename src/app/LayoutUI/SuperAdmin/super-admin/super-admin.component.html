@@ -5,21 +5,37 @@
       color="primary"
       aria-label="Example icon button with a home icon"
     >
-      <mat-icon>home</mat-icon></button
-    ><span> Admin DashBoard</span>
+      <mat-icon>games</mat-icon></button
+    ><span class="list"> Admin DashBoard</span>
     <mat-list role="list">
-      <mat-list-item [routerLink]="['Admin']" role="listitem">
-        DashBoard</mat-list-item
+      <mat-list-item [routerLink]="['Admin']" role="listitem" class="list">
+        <mat-icon>home</mat-icon>DashBoard</mat-list-item
       >
       <mat-list-item
+        class="list"
         role="listitem"
         routerLink="Admin/course"
         routerLinkActive="active"
-        >Course</mat-list-item
       >
-      <mat-list-item role="listitem"> Category</mat-list-item>
-      <mat-list-item role="listitem">Tutor</mat-list-item>
-      <mat-list-item role="listitem">Category</mat-list-item>
+        <mat-icon>view_list</mat-icon>Course</mat-list-item
+      >
+      <mat-list-item class="list" role="listitem" routerLink="Admin/cat">
+        <mat-icon>featured_play_list</mat-icon> Category</mat-list-item
+      >
+      <mat-list-item class="list" role="listitem" routerLink="Admin/tutor">
+        <mat-icon>library_books</mat-icon>Tutor</mat-list-item
+      >
+
+      <mat-list-item class="list" role="listitem" routerLink="Admin/coupon">
+        <mat-icon>new_releases</mat-icon>Coupon</mat-list-item
+      >
+      <mat-list-item
+        class="list"
+        role="listitem"
+        routerLink="Admin/certificate"
+      >
+        <mat-icon>new_releases</mat-icon>Certificate</mat-list-item
+      >
     </mat-list>
   </mat-drawer>
   <mat-drawer-content>
@@ -27,13 +43,14 @@
       <mat-toolbar>
         <button
           mat-icon-button
+          color="accent"
           class="example-icon"
           aria-label="Example icon-button with menu icon"
           (click)="drawer.toggle()"
         >
           <mat-icon>menu</mat-icon>
         </button>
-        <span> Admin DashBoard</span>
+        <span class="list"> Admin DashBoard</span>
         <span class="example-spacer"></span>
         <span class="name">{{ name }}</span>
         <button
@@ -45,7 +62,7 @@
           <mat-icon>account_circle</mat-icon>
         </button>
         <mat-menu #menu="matMenu">
-          <button mat-menu-item>
+          <button mat-menu-item (click)="PopUpDetail()">
             <mat-icon>perm_identity</mat-icon>
             <span>ProfileDetail</span>
           </button>

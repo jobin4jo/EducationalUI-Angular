@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { CourseService } from '../../Services/course.service';
 
 @Component({
@@ -7,9 +8,15 @@ import { CourseService } from '../../Services/course.service';
   styleUrls: ['./course.component.scss'],
 })
 export class CourseComponent implements OnInit {
-  constructor(private course: CourseService) {}
+  constructor(private course: CourseService, private route: Router) {}
   dataSource: any;
-  displayedColumns = ['courseName', 'courseImageUrl', 'price', 'Actions'];
+  displayedColumns = [
+    'Sl.no',
+    'courseName',
+    'courseImageUrl',
+    'price',
+    'Actions',
+  ];
 
   ngOnInit() {
     this.getAllCourse();
@@ -28,5 +35,8 @@ export class CourseComponent implements OnInit {
       console.log(res);
       this.getAllCourse();
     });
+  }
+  onaddCourse() {
+    this.route.navigate(['Admin/addCourse']);
   }
 }

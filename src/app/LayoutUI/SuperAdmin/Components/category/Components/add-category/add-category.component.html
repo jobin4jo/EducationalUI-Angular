@@ -1,0 +1,22 @@
+<mat-card>
+  <mat-card-content>
+    <form class="example-form" [formGroup]="categoryForm">
+      <mat-form-field class="example-full-width">
+        <mat-label>Category Name</mat-label>
+        <input
+          matInput
+          formControlName="categoryName"
+          placeholder="CategoryName"
+        />
+      </mat-form-field>
+
+      <button mat-button color="primary" (click)="OnAdd() " >Submit</button
+      >&nbsp;&nbsp;
+      <button mat-button color="accent" [mat-dialog-close]="true">Close</button>
+      <!-- <mat-form-field class="example-full-width">
+        <mat-label>Leave a comment</mat-label>
+        <textarea matInput placeholder="Ex. It makes me feel..."></textarea>
+      </mat-form-field> -->
+    </form>
+  </mat-card-content>
+</mat-card>

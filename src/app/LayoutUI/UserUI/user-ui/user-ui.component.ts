@@ -13,4 +13,7 @@ export class UserUIComponent implements OnInit {
   Onlogin() {
     this.router.navigate(['']);
   }
+  onregister() {
+    this.router.navigate(['signup']);
+  }
 }

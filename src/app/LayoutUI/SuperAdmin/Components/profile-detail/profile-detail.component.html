@@ -1,0 +1,40 @@
+<mat-card style="width: 500px">
+  <mat-card-content>
+    <img
+      style="
+        width: 110px;
+        height: 100px;
+        border-radius: 72px;
+        border: solid 1px black;
+      "
+      src="../../../../../assets/png-transparent-user-computer-icons-user-miscellaneous-cdr-rectangle-thumbnail.png"
+    />
+    <br />
+    &nbsp;
+    <p class="pop">
+      <mat-icon>account_circle</mat-icon>&nbsp; Name:{{ data.userName }}
+    </p>
+    <hr />
+
+    <p class="pop">
+      <mat-icon>perm_phone_msg</mat-icon> &nbsp;PhoneNumber:
+      {{ data.PhoneNumber }}
+    </p>
+    <hr />
+    <p class="pop">
+      <mat-icon>view_agenda</mat-icon> &nbsp;address: {{ data.address }}
+    </p>
+    <hr />
+    <p class="pop"><mat-icon>work</mat-icon> &nbsp;city:{{ data.city }}</p>
+    <hr />
+    <p><mat-icon> call</mat-icon> &nbsp;State:{{ data.state }}</p>
+    <hr />
+    <p class="pop">
+      <mat-icon> list_alt</mat-icon> &nbsp;EmailId:{{ data.emailId }}
+    </p>
+    <hr />
+    <p class="pop">
+      <mat-icon>supervised_user_circle</mat-icon>&nbsp;Role :{{ data.role }}
+    </p>
+  </mat-card-content>
+</mat-card>

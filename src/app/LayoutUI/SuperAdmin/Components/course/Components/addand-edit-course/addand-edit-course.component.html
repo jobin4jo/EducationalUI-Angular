@@ -1,0 +1,60 @@
+<mat-card style="margin: 10px">
+  <mat-card-content>
+    <form class="example-form" [formGroup]="CourseForm">
+      <mat-card>
+        <div class="row">
+          <div class="col-12">
+            <img style="width: 50%; height: 300px" [src]="coverimage" />
+          </div>
+          <input
+            style="color: #ffff"
+            type="file"
+            (change)="ImageUpload($event)"
+          />
+        </div>
+      </mat-card>
+      <mat-form-field class="example-full-width">
+        <mat-label>courseName</mat-label>
+        <input
+          matInput
+          placeholder="Enter CourseName"
+          formControlName="courseName"
+        />
+      </mat-form-field>
+      <mat-form-field style="width: 50%">
+        <mat-label>Course Price</mat-label>
+        <input
+          type="text"
+          matInput
+          placeholder="Enter Course Price"
+          formControlName="coursePrice"
+        /> </mat-form-field
+      >&nbsp;
+      <mat-form-field style="width: 48%">
+        <mat-label>Category</mat-label>
+        <mat-select formControlName="categoryId">
+          <mat-option
+            *ngFor="let item of categoryCollection"
+            [value]="item.categoryId"
+          >
+            {{ item.categoryName }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width">
+        <mat-label>Course Description</mat-label>
+        <textarea
+          matInput
+          placeholder=""
+          formControlName="courseDescription"
+        ></textarea>
+      </mat-form-field>
+      <button mat-flat-button color="primary" (click)="OnSubmit()">
+        Submit</button
+      >&nbsp;&nbsp;
+      <button mat-flat-button color="accent" (click)="OnClear()">Clear</button>&nbsp;&nbsp;
+      <button mat-flat-button (click)="OnBack()" color="warn">Back</button>
+    </form>
+  </mat-card-content>
+</mat-card>

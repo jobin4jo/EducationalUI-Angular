@@ -9,13 +9,21 @@
     </button>
     <p style="margin-bottom: 1px">Learn Jo</p>
     <div style="margin-left: 150px">
-      <button mat-flat-button color="primary">Home</button>&nbsp;&nbsp;
+      <button mat-flat-button color="primary" routerLink="User">Home</button
+      >&nbsp;&nbsp;
       <button mat-flat-button color="primary">Course</button>&nbsp;&nbsp;
       <button mat-flat-button color="primary">Blog</button>&nbsp;&nbsp;
       <button mat-flat-button color="primary">Home</button>
     </div>
+    <input
+      class="form-control mr-sm-2"
+      type="search"
+      placeholder="Searching Any Thing"
+      aria-label="Search"
+    />&nbsp;
+    <button class="btn btn-light my-2 my-sm-0" type="submit">Search</button>
     <span class="example-spacer"></span>
-    <button mat-flat-button color="primary">
+    <button mat-flat-button color="primary" (click)="onregister()">
       <mat-icon>fingerprint</mat-icon>
       Register
     </button>
@@ -23,31 +31,34 @@
       mat-flat-button
       color="primary"
       class="example-icon"
-      aria-label="Example icon-button with share icon" (click)="Onlogin()"
+      aria-label="Example icon-button with share icon"
+      (click)="Onlogin()"
     >
       <mat-icon>exit_to_app</mat-icon>
       Login
     </button>
   </mat-toolbar>
 </p>
+<div class="jumbotron">
+  <form class="form-inline my-2 my-lg-0" style="width: 500px"></form>
+</div>
 <router-outlet></router-outlet>
-<!-- <footer>
-  <p>
-    <mat-toolbar color="primary" style="height: 100px">
-      <button
-        mat-icon-button
-        color="accent"
-        aria-label="Example icon button with a menu icon"
-      >
-        <mat-icon>view_week</mat-icon>
-      </button>
-      <span class="example-spacer"></span>
-      <h6 style="font-style: normal; font-size: 13px; margin-right: 422px">
-        CopyRight@2023
-      </h6>
-      <h5 style="font-style: normal; font-size: 13px">
-        Developedby Jo4TechSolutions
-      </h5>
-    </mat-toolbar>
-  </p>
-</footer> -->
+
+<p>
+  <mat-toolbar color="primary" style="height: 100px">
+    <button
+      mat-icon-button
+      color="accent"
+      aria-label="Example icon button with a menu icon"
+    >
+      <mat-icon>view_week</mat-icon>
+    </button>
+    <span class="example-spacer"></span>
+    <h6 style="font-style: normal; font-size: 13px; margin-right: 422px">
+      CopyRight@2023
+    </h6>
+    <h5 style="font-style: normal; font-size: 13px">
+      Developedby Jo4TechSolutions
+    </h5>
+  </mat-toolbar>
+</p>

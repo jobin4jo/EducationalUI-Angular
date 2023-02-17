@@ -14,6 +14,9 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatListModule } from '@angular/material/list';
 import { MatTableModule } from '@angular/material/table';
 import { MatDialogModule } from '@angular/material/dialog';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatTreeModule } from '@angular/material/tree';
 @NgModule({
   declarations: [],
   imports: [CommonModule],
@@ -31,6 +34,9 @@ import { MatDialogModule } from '@angular/material/dialog';
     MatListModule,
     MatTableModule,
     MatDialogModule,
+    MatSnackBarModule,
+    MatCheckboxModule,
+    MatTreeModule,
   ],
 })
 export class MaterialModule {}

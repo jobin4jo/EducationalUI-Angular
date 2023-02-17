@@ -7,17 +7,13 @@ import { AllcourseComponent } from './Components/allcourse/allcourse.component';
 import { ContactComponent } from './Components/contact/contact.component';
 import { BlogComponent } from './Components/blog/blog.component';
 
-
 @NgModule({
   declarations: [
     HomeComponent,
     AllcourseComponent,
     ContactComponent,
-    BlogComponent
+    BlogComponent,
   ],
-  imports: [
-    CommonModule,
-    UserUIRoutingModule
-  ]
+  imports: [CommonModule, UserUIRoutingModule],
 })
-export class UserUIModule { }
+export class UserUIModule {}
