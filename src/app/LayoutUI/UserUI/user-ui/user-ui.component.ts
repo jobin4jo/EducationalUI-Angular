@@ -11,7 +11,7 @@ export class UserUIComponent implements OnInit {
 
   ngOnInit(): void {}
   Onlogin() {
-    this.router.navigate(['']);
+    this.router.navigate(['login']);
   }
   onregister() {
     this.router.navigate(['signup']);

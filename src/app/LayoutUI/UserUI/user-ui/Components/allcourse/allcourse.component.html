@@ -1,1 +1,21 @@
-<p>allcourse works!</p>
+<div
+  class="card shadow-lg p-3 mb-5 bg-body rounded"
+  *ngFor="let item of collection"
+  style="width: 18rem"
+>
+  <img
+    class="card-img-top"
+    src="{{ item.courseImageUrl }}"
+    alt="Card image cap"
+  />
+  <div class="card-body">
+    <h5 class="card-title">{{ item.courseName }}</h5>
+    <p class="card-text">
+      {{ item.courseDescription }}
+    </p>
+
+    <hr />
+    <p>Price:${{ item.price }}</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
