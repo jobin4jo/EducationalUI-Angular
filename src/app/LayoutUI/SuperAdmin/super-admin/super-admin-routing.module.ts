@@ -7,6 +7,7 @@ import { CouponComponent } from '../Components/coupon/coupon.component';
 import { AddandEditCourseComponent } from '../Components/course/Components/addand-edit-course/addand-edit-course.component';
 import { CourseComponent } from '../Components/course/course.component';
 import { TutorComponent } from '../Components/tutor/tutor.component';
+import { UserListComponent } from '../Components/user-list/user-list.component';
 
 const routes: Routes = [
   { path: '', component: AdminDashBoardComponent },
@@ -16,6 +17,7 @@ const routes: Routes = [
   { path: 'tutor', component: TutorComponent },
   { path: 'coupon', component: CouponComponent },
   { path: 'certificate', component: CertificateComponent },
+  {path:'userlist',component:UserListComponent}
 ];
 
 @NgModule({

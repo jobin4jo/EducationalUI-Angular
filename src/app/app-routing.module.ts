@@ -6,6 +6,19 @@ import { UserUIComponent } from './LayoutUI/UserUI/user-ui/user-ui.component';
 const routes: Routes = [
   {
     path: '',
+    component: UserUIComponent,
+    children: [
+      {
+        path: '',
+        loadChildren: () =>
+          import('../app/LayoutUI/UserUI/user-ui/user-ui.module').then(
+            (m) => m.UserUIModule
+          ),
+      },
+    ],
+  },
+  {
+    path: '',
     loadChildren: () =>
       import('../app/auth/auth.module').then((m) => m.AuthModule),
   },
@@ -19,19 +32,6 @@ const routes: Routes = [
           import(
             '../app/LayoutUI/SuperAdmin/super-admin/super-admin.module'
           ).then((m) => m.SuperAdminModule),
-      },
-    ],
-  },
-  {
-    path: '',
-    component: UserUIComponent,
-    children: [
-      {
-        path: 'User',
-        loadChildren: () =>
-          import('../app/LayoutUI/UserUI/user-ui/user-ui.module').then(
-            (m) => m.UserUIModule
-          ),
       },
     ],
   },

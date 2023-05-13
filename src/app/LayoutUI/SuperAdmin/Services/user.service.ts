@@ -6,10 +6,15 @@ import { environment } from 'src/environments/environment';
 })
 export class UserService {
   EduAPI = environment.EducationalAPI;
-  USERAPI = 'User/UserDetailGetByUserId?UserId=';
+  USERAPI = 'User/';
   constructor(private http: HttpClient) {}
 
   GetUserDetailById(id: number) {
-    return this.http.get(this.EduAPI + this.USERAPI + id);
+    return this.http.get(
+      this.EduAPI + this.USERAPI + 'UserDetailGetByUserId?UserId=' + id
+    );
+  }
+  GetAllUserList() {
+    return this.http.get(this.EduAPI + this.USERAPI + 'GetAllUser');
   }
 }

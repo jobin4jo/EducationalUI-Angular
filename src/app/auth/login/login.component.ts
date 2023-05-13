@@ -28,15 +28,15 @@ export class LoginComponent implements OnInit {
       this.snack.openSnackBar('Something Went Wrong', 'Undo');
     } else {
       this.Http.UserLogin(this.loginForm.value).subscribe((res: any) => {
-        console.log(res.data.userId.role);
-        if (res.data.userId.role == 'Admin') {
-          var name = res.data.userId.name;
+        console.log(res.data.role);
+        if (res.data.role == 'Admin') {
+          var name = res.data.name;
           this.snack.openSnackBar('Sucessfully ' + name + '', 'Splash');
           localStorage.setItem('user', JSON.stringify(res.data));
           this.loginForm.reset();
           this.router.navigate(['Admin']);
-        } else if (res.data.userId.role == 'User') {
-          this.router.navigate(['User']);
+        } else if (res.data.role == 'User') {
+          this.router.navigate(['']);
         }
       });
     }

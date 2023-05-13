@@ -22,7 +22,7 @@ export class TutorComponent implements OnInit {
   getAllTutorList() {
     return this.tutor.getAllTutorList().subscribe((res: any) => {
       this.datasource = res.data;
-      console.log(res);
+      console.log(res.data);
     });
   }
   OnTutorDelete(data: any) {
